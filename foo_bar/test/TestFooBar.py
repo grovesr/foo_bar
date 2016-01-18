@@ -7,7 +7,7 @@ import unittest
 from foo_bar.challenge1 import answer1
 from foo_bar.challenge2 import answer2_2
 
-class TestCahllenge1(unittest.TestCase):
+class TestChallenge1(unittest.TestCase):
     
     def test1(self):
         st="2*4*3+9 *3+ 5"
