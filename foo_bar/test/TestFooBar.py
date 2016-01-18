@@ -4,8 +4,15 @@ Created on Jan 16, 2016
 @author: grovesr
 '''
 import unittest
+from foo_bar.challenge1 import answer1
 from foo_bar.challenge2 import answer2_2
 
+class TestCahllenge1(unittest.TestCase):
+    
+    def test1(self):
+        st="2*4*3+9 *3+ 5"
+        res = answer1(st)
+        self.assertEqual(res, '243**93*5++')
 
 class TestChallenge2(unittest.TestCase):
 
