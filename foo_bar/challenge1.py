@@ -1,5 +1,5 @@
 import re
-def answer1(st):
+def answer(st):
     if any(re.findall(r'[^0-9+*\s]',st)):
         # input has invalid characters
         # allow spaces

@@ -56,7 +56,7 @@ class Interval:
     def length(self):
         return self.end() - self.begin()
 
-def answer2_2(intervals):
+def answer(intervals):
     nonDupIntervals = []
     [nonDupIntervals.append(interval) for interval in intervals if interval not in nonDupIntervals]
     newIntervals = []
