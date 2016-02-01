@@ -1,3 +1,2 @@
 *.pyc
-foo_bar/*/pyc
-foo_bar/test/*.pyc
+*odt#
