@@ -87,4 +87,4 @@ def answer(intervals):
 if __name__ == '__main__':
     intervals = [[10, 14], [4, 18], [19, 20], [19, 20], [13, 20]]
     print intervals
-    print answer2_2(intervals)
+    print answer(intervals)

@@ -7,6 +7,7 @@ import unittest
 from foo_bar.challenge1 import answer as answer1
 from foo_bar.challenge2 import answer as answer2_2
 from foo_bar.challenge3_1 import answer as answer3_1
+from foo_bar.challenge3_2 import answer as answer3_2
 
 class TestChallenge1(unittest.TestCase):
     
@@ -15,7 +16,7 @@ class TestChallenge1(unittest.TestCase):
         res = answer1(st)
         self.assertEqual(res, '243**93*5++')
 
-class TestChallenge2(unittest.TestCase):
+class TestChallenge2_2(unittest.TestCase):
 
 
     def test1(self):
@@ -66,7 +67,7 @@ def create_testcase(message, word, numInsertions = None, insertionPoints = None)
         insertionPts = insertionPoints
     return alteredMessage, insertionPts
 import re
-class TestChallenge3(unittest.TestCase):
+class TestChallenge3_1(unittest.TestCase):
     def test1(self):
         word =    "aabaa"
         message = "rodsjkashsljkasehf"
@@ -162,6 +163,149 @@ class TestChallenge3(unittest.TestCase):
         result = answer3_1(chunk, word)
 #         print result
         self.assertIn(re.sub(word, '', message), result)
+    
+import random
+class TestChallenge3_2(unittest.TestCase):
+    def test1(self):
+        heights = [1, 4, 2, 5, 1, 2, 3]
+        self.assertEqual(answer3_2(heights), 5)
+        
+    def test2(self):
+        heights = [1, 2, 3, 2, 1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test3(self):
+        heights = [1  ,2  ,3  ,4  ,4  ,3  ,6  ,7  ,2  ,1  ,2  ,3  ,9  ,8  ,1  ,2  ,3  ,4  ,8  ]
+        #                          1           5   6   5   4           7   6   5   4       = 43
+        self.assertEqual(answer3_2(heights), 43)
+        
+    def test4(self):
+        heights = [1,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test5(self):
+        heights = [1,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test6(self):
+        heights = [2,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test7(self):
+        heights = [2,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test8(self):
+        heights = [1,1,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test9(self):
+        heights = [1,1,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test10(self):
+        heights = [1,1,3]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test11(self):
+        heights = [1,2,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test12(self):
+        heights = [1,2,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test13(self):
+        heights = [1,2,3]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test14(self):
+        heights = [1,3,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test15(self):
+        heights = [1,3,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test16(self):
+        heights = [1,3,3]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test17(self):
+        heights = [2,1,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test18(self):
+        heights = [2,1,2]
+        self.assertEqual(answer3_2(heights), 1)
+        
+    def test19(self):
+        heights = [2,1,3]
+        self.assertEqual(answer3_2(heights), 1)
+    
+    def test20(self):
+        heights = [2,2,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test21(self):
+        heights = [2,2,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test22(self):
+        heights = [2,2,3]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test23(self):
+        heights = [2,3,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test24(self):
+        heights = [2,3,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test25(self):
+        heights = [2,3,3]
+        self.assertEqual(answer3_2(heights), 0)
+    
+    def test26(self):
+        heights = [3,1,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test27(self):
+        heights = [3,1,2]
+        self.assertEqual(answer3_2(heights), 1)
+        
+    def test28(self):
+        heights = [3,1,3]
+        self.assertEqual(answer3_2(heights), 2)
+    
+    def test29(self):
+        heights = [3,2,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test30(self):
+        heights = [3,2,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test31(self):
+        heights = [3,2,3]
+        self.assertEqual(answer3_2(heights), 1)
+        
+    def test32(self):
+        heights = [3,3,1]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test33(self):
+        heights = [3,3,2]
+        self.assertEqual(answer3_2(heights), 0)
+        
+    def test34(self):
+        heights = [3,3,3]
+        self.assertEqual(answer3_2(heights), 0)
+
+    def test35(self):
+        heights = [random.randint(1,100000) for k in range(9000)]
+        self.assert_(isinstance(answer3_2(heights), int))
     
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
