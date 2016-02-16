@@ -16,7 +16,7 @@ def answer(st):
 
 def main():
     st="2*4*3+9 *3+ 5"
-    print answer1(st)
+    print answer(st)
 
 if __name__ == '__main__':
     main()

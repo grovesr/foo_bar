@@ -8,6 +8,7 @@ from foo_bar.challenge1 import answer as answer1
 from foo_bar.challenge2 import answer as answer2_2
 from foo_bar.challenge3_1 import answer as answer3_1
 from foo_bar.challenge3_2 import answer as answer3_2
+from foo_bar.challenge3_3 import answer as answer3_3
 
 class TestChallenge1(unittest.TestCase):
     
@@ -307,6 +308,18 @@ class TestChallenge3_2(unittest.TestCase):
         heights = [random.randint(1,100000) for k in range(9000)]
         self.assert_(isinstance(answer3_2(heights), int))
     
+class TestChallenge3_3(unittest.TestCase):
+    
+    def test1(self):
+        minions = [[5, 1, 5], [10, 1, 2]]
+        res = answer3_3(minions)
+        self.assertListEqual(res, [1,0])
+    
+    def test2(self):
+        minions = [[390, 185, 624], [686, 351, 947], [276, 1023, 1024], [199, 148, 250]]
+        res = answer3_3(minions)
+        self.assertListEqual(res, [2,3,0,1])
+
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
