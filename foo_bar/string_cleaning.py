@@ -3,6 +3,8 @@ Created on Jan 30, 2016
 
 @author: grovesr
 
+google foo.bar challenge 3.1
+
 String cleaning
 ===============
 

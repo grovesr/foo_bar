@@ -1,4 +1,6 @@
-"""
+'''
+google foo.bar challenge 2.2
+
 This is the solution for challenge 2.2 of the Google foo.bar challenge called
 zombit_monitoring.  The premise is like this:
 you get a list of two element lists.  the two elements lists represent time
@@ -9,7 +11,7 @@ by at least 1 minion.  The catch is that the numbers in the intervals can be as
 large as 2**30-1, so simply creating ranges of monitoring units and putting them
 in a set or dictionary can cause memory issues. See foo_bar.test.TestCallenge2
 for example results.
-"""
+'''
 
 class Interval:
     def __init__(self, begin = None, end = None):

@@ -5,10 +5,10 @@ Created on Jan 16, 2016
 '''
 import unittest
 from foo_bar.challenge1 import answer as answer1
-from foo_bar.challenge2 import answer as answer2_2
-from foo_bar.challenge3_1 import answer as answer3_1
-from foo_bar.challenge3_2 import answer as answer3_2
-from foo_bar.challenge3_3 import answer as answer3_3
+from foo_bar.zombit_monitoring import answer as answer2_2
+from foo_bar.string_cleaning import answer as answer3_1
+from foo_bar.when_it_rains_it_pours import answer as answer3_2
+from foo_bar.minion_interrogation import answer as answer3_3
 
 class TestChallenge1(unittest.TestCase):
     
@@ -319,6 +319,7 @@ class TestChallenge3_3(unittest.TestCase):
         minions = [[390, 185, 624], [686, 351, 947], [276, 1023, 1024], [199, 148, 250]]
         res = answer3_3(minions)
         self.assertListEqual(res, [2,3,0,1])
+        
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

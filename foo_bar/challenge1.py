@@ -1,3 +1,11 @@
+'''
+Created on Jan 30, 2016
+
+@author: grovesr
+
+google foo.bar challenge 1
+'''
+
 import re
 def answer(st):
     if any(re.findall(r'[^0-9+*\s]',st)):
